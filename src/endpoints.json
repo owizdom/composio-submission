@@ -1,0 +1,249 @@
+{
+  "gmail": {
+    "base_url": "https://gmail.googleapis.com",
+    "endpoints": [
+      {
+        "tool_slug": "GMAIL_LIST_MESSAGES",
+        "description": "Lists the messages in the user's mailbox.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/messages",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.readonly"],
+        "parameters": {
+          "query": [
+            { "name": "maxResults", "type": "integer", "required": false, "description": "Maximum number of messages to return. Defaults to 100." },
+            { "name": "q", "type": "string", "required": false, "description": "Only return messages matching the specified query. Supports the same query format as the Gmail search box." },
+            { "name": "labelIds", "type": "string", "required": false, "description": "Only return messages with labels that match all of the specified label IDs." }
+          ],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_GET_MESSAGE",
+        "description": "Gets the specified message.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/messages/{messageId}",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.readonly"],
+        "parameters": {
+          "query": [
+            { "name": "format", "type": "string", "required": false, "description": "The format to return the message in. Acceptable values are 'full', 'metadata', 'minimal', 'raw'." }
+          ],
+          "path": [
+            { "name": "messageId", "type": "string", "required": true, "description": "The ID of the message to retrieve." }
+          ],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_SEND_MESSAGE",
+        "description": "Sends the specified message to the recipients in the To, Cc, and Bcc headers.",
+        "method": "POST",
+        "path": "/gmail/v1/users/me/messages/send",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.send"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": {
+            "content_type": "application/json",
+            "fields": [
+              { "name": "raw", "type": "string", "required": true, "description": "The entire email message in an RFC 2822 formatted and base64url encoded string." }
+            ]
+          }
+        }
+      },
+      {
+        "tool_slug": "GMAIL_LIST_LABELS",
+        "description": "Lists all labels in the user's mailbox.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/labels",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.labels"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_GET_PROFILE",
+        "description": "Gets the current user's Gmail profile.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/profile",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.readonly"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_CREATE_DRAFT",
+        "description": "Creates a new draft with the DRAFT label.",
+        "method": "POST",
+        "path": "/gmail/v1/users/me/drafts",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.compose"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": {
+            "content_type": "application/json",
+            "fields": [
+              { "name": "message", "type": "object", "required": true, "description": "The message content of the draft. Must include 'raw' field with base64url encoded RFC 2822 message." }
+            ]
+          }
+        }
+      },
+      {
+        "tool_slug": "GMAIL_LIST_THREADS",
+        "description": "Lists the threads in the user's mailbox.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/threads",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.readonly"],
+        "parameters": {
+          "query": [
+            { "name": "maxResults", "type": "integer", "required": false, "description": "Maximum number of threads to return." },
+            { "name": "q", "type": "string", "required": false, "description": "Only return threads matching the specified query." }
+          ],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_TRASH_MESSAGE",
+        "description": "Moves the specified message to the trash.",
+        "method": "POST",
+        "path": "/gmail/v1/users/me/messages/{messageId}/trash",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.modify"],
+        "parameters": {
+          "query": [],
+          "path": [
+            { "name": "messageId", "type": "string", "required": true, "description": "The ID of the message to Trash." }
+          ],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_LIST_FOLDERS",
+        "description": "Lists all folders in the user's mailbox.",
+        "method": "GET",
+        "path": "/gmail/v1/users/me/folders",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.readonly"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GMAIL_ARCHIVE_MESSAGE",
+        "description": "Archives the specified message by removing it from the inbox.",
+        "method": "POST",
+        "path": "/gmail/v1/users/me/messages/{messageId}/archive",
+        "required_scopes": ["https://www.googleapis.com/auth/gmail.modify"],
+        "parameters": {
+          "query": [],
+          "path": [
+            { "name": "messageId", "type": "string", "required": true, "description": "The ID of the message to archive." }
+          ],
+          "body": null
+        }
+      }
+    ]
+  },
+  "googlecalendar": {
+    "base_url": "https://www.googleapis.com",
+    "endpoints": [
+      {
+        "tool_slug": "GOOGLECALENDAR_LIST_EVENTS",
+        "description": "Returns events on the specified calendar.",
+        "method": "GET",
+        "path": "/calendar/v3/calendars/primary/events",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.readonly"],
+        "parameters": {
+          "query": [
+            { "name": "maxResults", "type": "integer", "required": false, "description": "Maximum number of events returned. Default is 250." },
+            { "name": "timeMin", "type": "string", "required": false, "description": "Lower bound (exclusive) for an event's end time to filter by. RFC3339 timestamp." },
+            { "name": "timeMax", "type": "string", "required": false, "description": "Upper bound (exclusive) for an event's start time to filter by. RFC3339 timestamp." },
+            { "name": "q", "type": "string", "required": false, "description": "Free text search terms to find events that match these terms." }
+          ],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GOOGLECALENDAR_CREATE_EVENT",
+        "description": "Creates an event on the specified calendar.",
+        "method": "POST",
+        "path": "/calendar/v3/calendars/primary/events",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.events"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": {
+            "content_type": "application/json",
+            "fields": [
+              { "name": "summary", "type": "string", "required": true, "description": "Title of the event." },
+              { "name": "start", "type": "object", "required": true, "description": "Start time. Must include 'dateTime' (RFC3339) and 'timeZone'." },
+              { "name": "end", "type": "object", "required": true, "description": "End time. Must include 'dateTime' (RFC3339) and 'timeZone'." },
+              { "name": "description", "type": "string", "required": false, "description": "Description of the event." }
+            ]
+          }
+        }
+      },
+      {
+        "tool_slug": "GOOGLECALENDAR_GET_EVENT",
+        "description": "Returns an event based on its Google Calendar ID.",
+        "method": "GET",
+        "path": "/calendar/v3/calendars/primary/events/{eventId}",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.readonly"],
+        "parameters": {
+          "query": [],
+          "path": [
+            { "name": "eventId", "type": "string", "required": true, "description": "Event identifier." }
+          ],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GOOGLECALENDAR_LIST_CALENDARS",
+        "description": "Returns the calendars on the user's calendar list.",
+        "method": "GET",
+        "path": "/calendar/v3/users/me/calendarList",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.readonly"],
+        "parameters": {
+          "query": [
+            { "name": "maxResults", "type": "integer", "required": false, "description": "Maximum number of entries returned." },
+            { "name": "showHidden", "type": "boolean", "required": false, "description": "Whether to show hidden entries." }
+          ],
+          "path": [],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GOOGLECALENDAR_DELETE_EVENT",
+        "description": "Deletes an event from the specified calendar.",
+        "method": "DELETE",
+        "path": "/calendar/v3/calendars/primary/events/{eventId}",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.events"],
+        "parameters": {
+          "query": [],
+          "path": [
+            { "name": "eventId", "type": "string", "required": true, "description": "Event identifier." }
+          ],
+          "body": null
+        }
+      },
+      {
+        "tool_slug": "GOOGLECALENDAR_LIST_REMINDERS",
+        "description": "Lists all reminders for the specified calendar.",
+        "method": "GET",
+        "path": "/calendar/v3/calendars/primary/reminders",
+        "required_scopes": ["https://www.googleapis.com/auth/calendar.readonly"],
+        "parameters": {
+          "query": [],
+          "path": [],
+          "body": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,634 @@
+{
+  "timestamp": "2026-03-25T20:54:16.617Z",
+  "total_endpoints": 16,
+  "results": [
+    {
+      "tool_slug": "GMAIL_LIST_MESSAGES",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/messages",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "messages": [
+          {
+            "id": "19d26b2ab88201d6",
+            "threadId": "19d26b2ab88201d6"
+          },
+          {
+            "id": "19d26b2aa27385db",
+            "threadId": "19d26b2aa27385db"
+          },
+          {
+            "id": "19d26ade8a759f12",
+            "threadId": "19d26ade8a759f12"
+          },
+          {
+            "id": "19d26ad31e613fd7",
+            "threadId": "19d26ad31e613fd7"
+          },
+          {
+            "id": "19d26ad30b6137d9",
+            "threadId": "19d26ad30b6137d9"
+          }
+        ],
+        "nextPageToken": "02324444012362306335",
+        "resultSizeEstimate": 201
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_SEND_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/send",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "id": "19d26c6cb74c3e9a",
+        "threadId": "19d26c6cb74c3e9a",
+        "labelIds": [
+          "UNREAD",
+          "SENT",
+          "INBOX"
+        ]
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.send"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_LIST_LABELS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/labels",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "labels": [
+          {
+            "id": "CHAT",
+            "name": "CHAT",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "SENT",
+            "name": "SENT",
+            "type": "system"
+          },
+          {
+            "id": "INBOX",
+            "name": "INBOX",
+            "type": "system"
+          },
+          {
+            "id": "IMPORTANT",
+            "name": "IMPORTANT",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "TRASH",
+            "name": "TRASH",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "DRAFT",
+            "name": "DRAFT",
+            "type": "system"
+          },
+          {
+            "id": "SPAM",
+            "name": "SPAM",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_FORUMS",
+            "name": "CATEGORY_FORUMS",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_UPDATES",
+            "name": "CATEGORY_UPDATES",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_PERSONAL",
+            "name": "CATEGORY_PERSONAL",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_PROMOTIONS",
+            "name": "CATEGORY_PROMOTIONS",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "CATEGORY_SOCIAL",
+            "name": "CATEGORY_SOCIAL",
+            "messageListVisibility": "hide",
+            "labelListVisibility": "labelHide",
+            "type": "system"
+          },
+          {
+            "id": "STARRED",
+            "name": "STARRED",
+            "type": "system"
+          },
+          {
+            "id": "UNREAD",
+            "name": "UNREAD",
+            "type": "system"
+          }
+        ]
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.labels"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_GET_PROFILE",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/profile",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "emailAddress": "rinnwackemm@gmail.com",
+        "messagesTotal": 362,
+        "threadsTotal": 356,
+        "historyId": "33701"
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_CREATE_DRAFT",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/drafts",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "id": "r-5084186054338488887",
+        "message": {
+          "id": "19d26c6ca4739292",
+          "threadId": "19d26c6ca4739292",
+          "labelIds": [
+            "DRAFT"
+          ]
+        }
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.compose"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_LIST_THREADS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/threads",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "threads": [
+          {
+            "id": "19d26c6ca4739292",
+            "snippet": "Automated draft.",
+            "historyId": "33695"
+          },
+          {
+            "id": "19d26b2ab88201d6",
+            "snippet": "Automated test.",
+            "historyId": "33691"
+          },
+          {
+            "id": "19d26b2aa27385db",
+            "snippet": "Automated draft.",
+            "historyId": "33615"
+          },
+          {
+            "id": "19d26ade8a759f12",
+            "snippet": "Give users access to these platform apps Goals and Projects are now available in your organization. These platform apps help users share regular status updates and track progress toward objectives.",
+            "historyId": "33447"
+          },
+          {
+            "id": "19d26ad31e613fd7",
+            "snippet": "Automated test.",
+            "historyId": "33445"
+          }
+        ],
+        "nextPageToken": "07458527879826482680",
+        "resultSizeEstimate": 201
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_LIST_FOLDERS",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/folders",
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Route-level 404: The API path itself is not recognized. This endpoint does not exist. | Attempts: 1 ([full→404]) | Confidence: 95%",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/gmail/v1/users/me/folders</code> was not found on this server.  <ins>That’s all we know.</ins>\n",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_EVENTS",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/events",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "kind": "calendar#events",
+        "etag": "\"p33vvdrufuatp60o\"",
+        "summary": "rinnwackemm@gmail.com",
+        "description": "",
+        "updated": "2026-03-25T20:32:17.689Z",
+        "timeZone": "Africa/Maputo",
+        "accessRole": "owner",
+        "defaultReminders": [
+          {
+            "method": "popup",
+            "minutes": 30
+          }
+        ],
+        "nextPageToken": "CkAKMAouCgwI6YmRzgYQmPG98QISHgocChpwdXA2YXUxYXI5bGlkY3Y0c25ka2I0cmZyMBoMCPeWkc4GELCm_J4CwD4B",
+        "items": [
+          {
+            "kind": "calendar#event",
+            "etag": "\"3548940755549726\"",
+            "id": "pup6au1ar9lidcv4sndkb4rfr0",
+            "status": "confirmed",
+            "htmlLink": "https://www.google.com/calendar/event?eid=cHVwNmF1MWFyOWxpZGN2NHNuZGtiNHJmcjAgcmlubndhY2tlbW1AbQ",
+            "created": "2026-03-25T20:26:17.000Z",
+            "updated": "2026-03-25T20:26:17.774Z",
+            "summary": "Endpoint Validation Test Event",
+            "description": "Automated validation test",
+            "creator": {
+              "email": "rinnwackemm@gmail.com",
+              "self": true
+            },
+            "organizer": {
+              "email": "rinnwackemm@gmail.com",
+              "self": true
+            },
+            "start": {
+              "dateTime": "2026-03-25T23:26:16+02:00",
+              "timeZone": "UTC"
+            },
+            "end": {
+              "dateTime": "2026-03-26T00:26:16+02:00",
+              "timeZone": "UTC"
+            },
+            "iCalUID": "pup6au1ar9lidcv4sndkb4rfr0@google.com",
+            "sequence": 0,
+            "reminders": {
+              "useDefault": true
+            },
+            "eventType": "default"
+          }
+        ]
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_CREATE_EVENT",
+      "method": "POST",
+      "path": "/calendar/v3/calendars/primary/events",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "kind": "calendar#event",
+        "etag": "\"3548944111453630\"",
+        "id": "h3itgt7u3f74jtbf7c7npvmqvc",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=aDNpdGd0N3UzZjc0anRiZjdjN25wdm1xdmMgcmlubndhY2tlbW1AbQ",
+        "created": "2026-03-25T20:54:15.000Z",
+        "updated": "2026-03-25T20:54:15.726Z",
+        "summary": "Endpoint Validation Test Event",
+        "description": "Automated validation test",
+        "creator": {
+          "email": "rinnwackemm@gmail.com",
+          "self": true
+        },
+        "organizer": {
+          "email": "rinnwackemm@gmail.com",
+          "self": true
+        },
+        "start": {
+          "dateTime": "2026-03-25T23:54:14+02:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-03-26T00:54:14+02:00",
+          "timeZone": "UTC"
+        },
+        "iCalUID": "h3itgt7u3f74jtbf7c7npvmqvc@google.com",
+        "sequence": 0,
+        "reminders": {
+          "useDefault": true
+        },
+        "eventType": "default"
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_CALENDARS",
+      "method": "GET",
+      "path": "/calendar/v3/users/me/calendarList",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "kind": "calendar#calendarList",
+        "etag": "\"p33vvdrufuatp60o\"",
+        "nextSyncToken": "CP_278_yu5MDEhVyaW5ud2Fja2VtbUBnbWFpbC5jb20=",
+        "items": [
+          {
+            "kind": "calendar#calendarListEntry",
+            "etag": "\"1771765280270340\"",
+            "id": "rinnwackemm@gmail.com",
+            "summary": "rinnwackemm@gmail.com",
+            "timeZone": "Africa/Maputo",
+            "colorId": "14",
+            "backgroundColor": "#9fe1e7",
+            "foregroundColor": "#000000",
+            "selected": true,
+            "accessRole": "owner",
+            "defaultReminders": [
+              {
+                "method": "popup",
+                "minutes": 30
+              }
+            ],
+            "notificationSettings": {
+              "notifications": [
+                {
+                  "type": "eventCreation",
+                  "method": "email"
+                },
+                {
+                  "type": "eventChange",
+                  "method": "email"
+                },
+                {
+                  "type": "eventCancellation",
+                  "method": "email"
+                },
+                {
+                  "type": "eventResponse",
+                  "method": "email"
+                }
+              ]
+            },
+            "primary": true,
+            "conferenceProperties": {
+              "allowedConferenceSolutionTypes": [
+                "hangoutsMeet"
+              ]
+            }
+          },
+          {
+            "kind": "calendar#calendarListEntry",
+            "etag": "\"1774469674932751\"",
+            "id": "en.rw#holiday@group.v.calendar.google.com",
+            "summary": "Holidays in Rwanda",
+            "description": "Holidays and Observances in Rwanda",
+            "timeZone": "Africa/Maputo",
+            "colorId": "8",
+            "backgroundColor": "#16a765",
+            "foregroundColor": "#000000",
+            "selected": true,
+            "accessRole": "reader",
+            "defaultReminders": [],
+            "conferenceProperties": {
+              "allowedConferenceSolutionTypes": [
+                "hangoutsMeet"
+              ]
+            }
+          }
+        ]
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_LIST_REMINDERS",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/reminders",
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Route-level 404: The API path itself is not recognized. This endpoint does not exist. | Attempts: 1 ([full→404]) | Confidence: 95%",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/calendar/v3/calendars/primary/reminders</code> was not found on this server.  <ins>That’s all we know.</ins>\n",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_GET_MESSAGE",
+      "method": "GET",
+      "path": "/gmail/v1/users/me/messages/{messageId}",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "id": "19d26b2ab88201d6",
+        "threadId": "19d26b2ab88201d6",
+        "labelIds": [
+          "UNREAD",
+          "SENT",
+          "INBOX"
+        ],
+        "snippet": "Automated test.",
+        "payload": {
+          "partId": "",
+          "mimeType": "text/plain",
+          "filename": "",
+          "headers": [
+            {
+              "name": "Received",
+              "value": "from 511566560828 named unknown by gmailapi.google.com with HTTPREST; Wed, 25 Mar 2026 13:32:16 -0700"
+            },
+            {
+              "name": "Received",
+              "value": "from 511566560828 named unknown by gmailapi.google.com with HTTPREST; Wed, 25 Mar 2026 13:32:16 -0700"
+            },
+            {
+              "name": "From",
+              "value": "rinnwackemm@gmail.com"
+            },
+            {
+              "name": "To",
+              "value": "rinnwackemm@gmail.com"
+            },
+            {
+              "name": "Subject",
+              "value": "Endpoint Validation Test"
+            },
+            {
+              "name": "Content-Type",
+              "value": "text/plain; charset=utf-8"
+            },
+            {
+              "name": "Date",
+              "value": "Wed, 25 Mar 2026 13:32:16 -0700"
+            },
+            {
+              "name": "Message-Id",
+              "value": "<CACm+=ufzaLWJ6TgQ5GHUKw8-LeuX-k2KeAJwNAfsii5P3nBNng@mail.gmail.com>"
+            }
+          ],
+          "body": {
+            "size": 15,
+            "data": "QXV0b21hdGVkIHRlc3Qu"
+          }
+        },
+        "sizeEstimate": 512,
+        "historyId": "33691",
+        "internalDate": "1774470736000"
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_TRASH_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/{messageId}/trash",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "id": "19d26b2ab88201d6",
+        "threadId": "19d26b2ab88201d6",
+        "labelIds": [
+          "UNREAD",
+          "TRASH",
+          "SENT"
+        ]
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.modify"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GMAIL_ARCHIVE_MESSAGE",
+      "method": "POST",
+      "path": "/gmail/v1/users/me/messages/{messageId}/archive",
+      "status": "invalid_endpoint",
+      "http_status_code": 404,
+      "response_summary": "Route-level 404: The API path itself is not recognized. This endpoint does not exist. | Attempts: 1 ([full→404]) | Confidence: 95%",
+      "response_body": "<!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding/googlelogo/1x/googlelogo_color_150x54dp.png) no-repeat;margin-left:-5px}@media only screen and (min-resolution:192dpi){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat 0% 0%/100% 100%;-moz-border-image:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) 0}}@media only screen and (-webkit-min-device-pixel-ratio:2){#logo{background:url(//www.google.com/images/branding/googlelogo/2x/googlelogo_color_150x54dp.png) no-repeat;-webkit-background-size:100% 100%}}#logo{display:inline-block;height:54px;width:150px}\n  </style>\n  <a href=//www.google.com/><span id=logo aria-label=Google></span></a>\n  <p><b>404.</b> <ins>That’s an error.</ins>\n  <p>The requested URL <code>/gmail/v1/users/me/messages/19d26b2ab88201d6/archive</code> was not found on this server.  <ins>That’s all we know.</ins>\n",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/gmail.modify"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_GET_EVENT",
+      "method": "GET",
+      "path": "/calendar/v3/calendars/primary/events/{eventId}",
+      "status": "valid",
+      "http_status_code": 200,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→200]) | Confidence: 100%",
+      "response_body": {
+        "kind": "calendar#event",
+        "etag": "\"3548940755549726\"",
+        "id": "pup6au1ar9lidcv4sndkb4rfr0",
+        "status": "confirmed",
+        "htmlLink": "https://www.google.com/calendar/event?eid=cHVwNmF1MWFyOWxpZGN2NHNuZGtiNHJmcjAgcmlubndhY2tlbW1AbQ",
+        "created": "2026-03-25T20:26:17.000Z",
+        "updated": "2026-03-25T20:26:17.774Z",
+        "summary": "Endpoint Validation Test Event",
+        "description": "Automated validation test",
+        "creator": {
+          "email": "rinnwackemm@gmail.com",
+          "self": true
+        },
+        "organizer": {
+          "email": "rinnwackemm@gmail.com",
+          "self": true
+        },
+        "start": {
+          "dateTime": "2026-03-25T23:26:16+02:00",
+          "timeZone": "UTC"
+        },
+        "end": {
+          "dateTime": "2026-03-26T00:26:16+02:00",
+          "timeZone": "UTC"
+        },
+        "iCalUID": "pup6au1ar9lidcv4sndkb4rfr0@google.com",
+        "sequence": 0,
+        "reminders": {
+          "useDefault": true
+        },
+        "eventType": "default"
+      },
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.readonly"
+      ],
+      "available_scopes": []
+    },
+    {
+      "tool_slug": "GOOGLECALENDAR_DELETE_EVENT",
+      "method": "DELETE",
+      "path": "/calendar/v3/calendars/primary/events/{eventId}",
+      "status": "valid",
+      "http_status_code": 204,
+      "response_summary": "Success. Endpoint is valid and responding. | Attempts: 1 ([full→204]) | Confidence: 100%",
+      "response_body": "",
+      "required_scopes": [
+        "https://www.googleapis.com/auth/calendar.events"
+      ],
+      "available_scopes": []
+    }
+  ],
+  "summary": {
+    "valid": 13,
+    "invalid_endpoint": 3,
+    "insufficient_scopes": 0,
+    "error": 0
+  }
+}
